@@ -1,1 +1,4 @@
-npm test
+echo "🧩 Running pre-commit checks..."
+npm run lint:fix
+npm run format
+echo "✅ Code formatted & linted successfully."
