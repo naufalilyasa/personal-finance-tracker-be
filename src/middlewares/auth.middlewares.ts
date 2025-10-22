@@ -14,8 +14,6 @@ const deserializeUser = async (
 ) => {
   const authHeader = req.headers.authorization;
 
-  const message = "You're not logged in";
-
   if (!authHeader?.startsWith("Bearer ")) {
     return next(new AppError(401, "Unauthorized: Token is missing or invalid"));
   }

@@ -37,6 +37,7 @@ export const errorHandler = (
   }
 
   if (config.nodeEnv === "development") {
+    // eslint-disable-next-line no-console
     console.error("🔥 Error:", err);
   }
 

@@ -1,4 +1,4 @@
-import jwt, { type JwtPayload, type SignOptions } from "jsonwebtoken";
+import jwt, { type SignOptions } from "jsonwebtoken";
 
 import { AppError } from "./appError.js";
 
@@ -28,6 +28,7 @@ export const verifyJwt = (token: string, publicTokenKey: string) => {
     }
 
     return decoded;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return null;
   }
