@@ -18,4 +18,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Jalankan migration otomatis dan start server
-CMD ["sh", "-c", "npx prisma migrate deploy && npm run start"]
+CMD ["sh", "-c", "npx prisma migrate deploy && npx prisma db seed && npm run start"]
