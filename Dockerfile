@@ -11,6 +11,7 @@ COPY . .
 
 # Generate Prisma Client (supaya bisa dipakai saat build)
 RUN npx prisma generate
+COPY ./generated ./dist/generated
 
 # Build TypeScript ke JavaScript (dist/)
 RUN npm run build
