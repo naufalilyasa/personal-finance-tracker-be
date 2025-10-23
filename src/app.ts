@@ -1,16 +1,14 @@
-// import cors from "cors";
-import cookieParser from "cookie-parser";
 import express, { Request, Response } from "express";
 import morgan from "morgan";
+import corsMiddleware from "./middlewares/cors.middlewares.js";
 import { router } from "./routes/index.js";
 import { errorHandler } from "./middlewares/error.middlewares.js";
 
 const app = express();
 
 // Middleware
-// app.use(cors());
+app.use(corsMiddleware);
 app.use(express.json());
-app.use(cookieParser());
 if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 // Health check
