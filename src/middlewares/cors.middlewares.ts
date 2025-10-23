@@ -3,7 +3,6 @@ import "dotenv/config";
 import cors from "cors";
 
 const whitelist = [config.apiUrl, config.webUrl];
-console.log(config.webUrl);
 
 const corsMiddleware = cors({
   allowedHeaders: ["Content-Type", "Authorization"],
